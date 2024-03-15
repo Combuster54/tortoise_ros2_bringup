@@ -14,7 +14,7 @@ services:
     environment:
       - ROS_IPV6=on
     build:
-      context: ./tortoisebot-ros2-real
+      context: ./real
       dockerfile: ./Dockerfile
 
   tortoisebot-ros2-slam-real:
@@ -29,5 +29,5 @@ services:
     depends_on:
       - tortoisebot-ros2-real
     build:
-      context: ./tortoisebot-ros2-slam-real
+      context: ./slam
       dockerfile: ./Dockerfile
