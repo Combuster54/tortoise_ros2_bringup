@@ -51,4 +51,4 @@ RUN /bin/bash -c 'source /opt/ros/$ROS_DISTRO/setup.bash && colcon build 2>&1 > 
 RUN echo "source /ros2_ws/install/setup.bash" >> /etc/bash.bashrc
 
 ENTRYPOINT ["bash", "/ros_entrypoint.sh"]
-CMD ["ros2", "launch tortoisebot_bringup autobringup.launch.py use_sim_time:=False slam:=False"]
+CMD ["ros2", "launch tortoisebot_bringup autobringup.launch.py use_sim_time:=False exploration:=True"]
