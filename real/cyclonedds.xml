@@ -6,14 +6,12 @@
             <AllowMulticast>false</AllowMulticast>
             <MaxMessageSize>65500B</MaxMessageSize>
             <FragmentSize>4000B</FragmentSize>
-            <Transport>udp6</Transport>
+            <Transport>udp4</Transport>
         </General>
         <Discovery>
             <Peers>
-                 
                 <Peer address="192.168.1.21"/> <!-- IP Robot -->
                 <Peer address="192.168.1.6"/> <!-- IP PC -->
- 
             </Peers>
             <MaxAutoParticipantIndex>100</MaxAutoParticipantIndex>
             <ParticipantIndex>auto</ParticipantIndex>
