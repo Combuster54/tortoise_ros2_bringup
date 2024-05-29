@@ -57,7 +57,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-dev \
     python3-rpi.gpio
 
-RUN "export ROS_DOMAIN_ID=07" >> ~/.bashrc
+ENV ROS_DOMAIN_ID=07
 
 
 ENTRYPOINT ["bash", "/ros_entrypoint.sh"]
