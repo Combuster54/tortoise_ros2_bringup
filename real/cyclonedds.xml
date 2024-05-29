@@ -11,8 +11,8 @@
         <Discovery>
             <Peers>
                  
- <Peer address="fc94:4809:f11e:24d4:3c63:96a0:1718:6a2d"/>  
- <Peer address="husarnet-local"/>  
+                <Peer address="192.168.1.21"/> <!-- IP Robot -->
+                <Peer address="192.168.1.6"/> <!-- IP PC -->
  
             </Peers>
             <MaxAutoParticipantIndex>100</MaxAutoParticipantIndex>
