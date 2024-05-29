@@ -56,6 +56,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libraspberrypi-dev \    
     python3-dev \
     python3-rpi.gpio
-  
+
+RUN "export ROS_DOMAIN_ID=07" >> ~/.bashrc
+
+
 ENTRYPOINT ["bash", "/ros_entrypoint.sh"]
 CMD ["ros2", "launch tortoisebot_bringup autobringup.launch.py use_sim_time:=False exploration:=True"]
