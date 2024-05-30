@@ -10,7 +10,10 @@
         </General>
         <Discovery>
             <Peers>
- <Peer address="fc94:4809:f11e:24d4:3c63:96a0:1718:6a2d"/>   
+                 
+		 <Peer address="fc94:4809:f11e:24d4:3c63:96a0:1718:6a2d"/>  
+		 <Peer address="husarnet-local"/>  
+ 
             </Peers>
             <MaxAutoParticipantIndex>100</MaxAutoParticipantIndex>
             <ParticipantIndex>auto</ParticipantIndex>
