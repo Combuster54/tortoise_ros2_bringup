@@ -10,7 +10,6 @@
         </General>
         <Discovery>
             <Peers>
-		 <Peer address="fc94:5271:f910:b28d:8b9f:b7ba:947a:f240"/>  
 		 <Peer address="husarnet-local"/>  
  
             </Peers>
