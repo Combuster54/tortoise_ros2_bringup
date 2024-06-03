@@ -1,8 +1,8 @@
 FROM ros:galactic
 
-ARG USERNAME=tortoisebot
-ARG USER_UID=1000
-ARG USER_GID=$USER_UID
+#ARG USERNAME=tortoisebot
+#ARG USER_UID=1000
+#ARG USER_GID=$USER_UID
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
@@ -38,13 +38,13 @@ RUN rosdep install --from-paths src --ignore-src -r -y
 
 RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> /etc/bash.bashrc
 
-ENV RMW_IMPLEMENTATION="rmw_cyclonedds_cpp"
+#ENV RMW_IMPLEMENTATION="rmw_cyclonedds_cpp"
 
-RUN mkdir -p /var/lib/theconstruct.rrl/
+#RUN mkdir -p /var/lib/theconstruct.rrl/
 
-COPY cyclonedds.xml /var/lib/theconstruct.rrl/cyclonedds.xml
+#COPY cyclonedds.xml /var/lib/theconstruct.rrl/cyclonedds.xml
 
-ENV CYCLONEDDS_URI="file:///var/lib/theconstruct.rrl/cyclonedds.xml"
+#ENV CYCLONEDDS_URI="file:///var/lib/theconstruct.rrl/cyclonedds.xml"
 
 RUN /bin/bash -c 'source /opt/ros/$ROS_DISTRO/setup.bash && colcon build 2>&1 > /ros2_ws/build.log && exit 0'
 
